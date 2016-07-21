@@ -2,6 +2,7 @@
 __pycache__
 *.sw[op]
 *.egg-info
-.venv
+.env
 build/
 dist/
+*.cfg
