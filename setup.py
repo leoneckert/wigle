@@ -5,7 +5,7 @@ from setuptools import setup, find_packages
 setup(
     name="wigle",
     version="0.0.4",
-    author="Stanisław Pitucha",
+    author="Stanislaw Pitucha",
     author_email="viraptor@gmail.com",
     description="Interface to wigle website",
     license="MIT",

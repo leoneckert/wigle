@@ -102,6 +102,12 @@ class Wigle(object):
         info = resp.json()
         return info
 
+
+    def from_coordinates(self, lat, lon, lat_off = 0.000944, lon_off = 0.001148):
+        return self.search(lat_range=(lat - lat_off, lat + lat_off), 
+                            long_range = (lon - lon_off, lon + lon_off))
+    
+
     def search(self, lat_range=None, long_range=None, variance=None,
                bssid=None, ssid=None,
                last_update=None,

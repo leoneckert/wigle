@@ -1,12 +1,14 @@
+# https://search.mapzen.com/v1/search?api_key=search-TeXrSTX&text=Kornblumenweg%20Harlaching
+
 import argparse
+from pprint import pprint
 
 from tools import Users
 from tools import Wigle
 
-
 parser = argparse.ArgumentParser()
-parser.add_argument('--lat', default=40.7291, type=float, required=False, help='latitude')
-parser.add_argument('--lon', default=-73.9943, type=float, required=False, help='longitude')
+parser.add_argument('--lat', default=40.727721, type=float, required=False, help='latitude')
+parser.add_argument('--lon', default=-74.002102, type=float, required=False, help='longitude')
 args = parser.parse_args()
 
 
@@ -14,29 +16,24 @@ args = parser.parse_args()
 if __name__ == '__main__':
     
     users = Users.Users()
-    user = users.ran()
-    account = Wigle.Wigle(user["name"], user["pw"])
-    
+    user = users.select_random()
+
+    account = Wigle.Wigle(user.name, user.password)
 
     print "[+] MAKING REQUEST"
-    print "\tUSERNAME:", user["name"], " PASSWORD:", user["pw"][0] + "*"*(len(user["pw"])-1)
+    print "\tUSERNAME", user.name, " PASSWORD", user.password[0] + "*"*(len(user.password)-1)
     print '\tLATITUDE', args.lat, " LONGITUDE", args.lon
 
-    lon_diff = -0.001148 #lon difference
-    lat_diff = -0.000944 #lat difference
-
-
-
-    results = account.search(lat_range=(lat - lat_diff, lat + lat_diff), long_range = (lon - lat_diff, lon + lat_diff))
+    results = account.from_coordinates(args.lat, args.lon)
     
     # results = account.search(ssid = 'itpsandbox')
+    print results
 
-    print account.get_user_info()
     for i, result in enumerate(results):
         print "-"*40+"\n"+str(i)+"\n"+"-"*40
         pprint(result)
 
-    print results
+    
 
 
 

@@ -1,0 +1,3 @@
+/usr/local/lib/python2.7/site-packages/wigle-0.0.4-py2.7.egg
+/usr/local/bin/wigle_user_info
+/usr/local/bin/wigle_search

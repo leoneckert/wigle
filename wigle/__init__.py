@@ -164,3 +164,4 @@ class Wigle(object):
             params['first'] = data['last'] + 1
 
         return wifis
+
