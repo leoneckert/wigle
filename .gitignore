@@ -8,7 +8,7 @@ build/
 dist/
 *.cfg
 
-
+notes
 
 
 # Created by https://www.gitignore.io/api/python,virtualenv
