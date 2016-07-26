@@ -1,0 +1,11 @@
+#settings.cfg
+
+[wigle_individual_accounts]
+1 = None
+
+[wigle_multi_accounts]
+usrnms = username1, username2, username3
+psswrd = password
+
+[mapzen]
+key = mapzen_api_key
