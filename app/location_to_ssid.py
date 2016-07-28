@@ -10,8 +10,9 @@ from tools import Wigle
 from tools import Results
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--lat', default=40.727721, type=float, required=False, help='latitude')
-parser.add_argument('--lon', default=-74.002102, type=float, required=False, help='longitude')
+parser.add_argument('--lat', default=40.727721, type=float, required=True, help='latitude')
+parser.add_argument('--lon', default=-74.002102, type=float, required=True, help='longitude')
+parser.add_argument('--rad', default=1, type=int, required=False, help='radius scale, default=1 (roughly 100m)')
 parser.add_argument('--name', required=True, help='name for output dir')
 parser.add_argument('-f', '--overwrite', action='store_true', help='overwrite existing files')
 args = parser.parse_args()
@@ -46,7 +47,7 @@ if __name__ == '__main__':
     print "\tUSERNAME", user.name, " PASSWORD", user.password[0] + "*"*(len(user.password)-1)
     print '\tLATITUDE', args.lat, " LONGITUDE", args.lon
 
-    data = account.from_coordinates(args.lat, args.lon)
+    data = account.from_coordinates(args.lat, args.lon, args.rad)
 
     results = Results.Results(data)
     results.write_to_file(path=output_path)

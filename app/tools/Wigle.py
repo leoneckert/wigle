@@ -104,9 +104,9 @@ class Wigle(object):
         return info
 
 
-    def from_coordinates(self, lat, lon, lat_off = 0.000944, lon_off = 0.001148):
-        return self.search(lat_range=(lat - lat_off, lat + lat_off), 
-                            long_range = (lon - lon_off, lon + lon_off))
+    def from_coordinates(self, lat, lon, radius_factor = 1, lat_off = 0.000944, lon_off = 0.001148):
+        return self.search(lat_range=(lat - (lat_off*radius_factor), lat + (lat_off*radius_factor)), 
+                            long_range = (lon - (lon_off*radius_factor), lon + (lon_off*radius_factor)))
     
 
     def search(self, lat_range=None, long_range=None, variance=None,
