@@ -1,2 +1,4 @@
-00:16:b6:14:c6:d0 linksys1452
-00:18:39:7a:cf:cf fishy
+04:A1:51:E7:AC:03 NETGEAR39
+08:86:3B:A9:B6:68 SGDA_WiFi
+74:91:1A:CE:18:58 attwifi
+74:91:1A:0E:18:58 TWCWiFi-Passpoint

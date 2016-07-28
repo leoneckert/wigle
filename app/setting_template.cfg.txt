@@ -1,11 +1,18 @@
 #settings.cfg
 
-[wigle_individual_accounts]
-1 = None
+# extend the list below for more wigle acounts
+#
+# example:
+# [1]
+# u = username1
+# p = password1
+# 
+# [2]
+# u = username2
+# p = password2
+# ...
 
-[wigle_multi_accounts]
-usrnms = username1, username2, username3
-psswrd = password
 
-[mapzen]
-key = mapzen_api_key
+[1]
+u = enter your username here
+p = enter your password here

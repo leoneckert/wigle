@@ -1,9 +1,10 @@
-00:18:39:0c:09:0e cottage
-00:12:17:aa:91:32 linksys_SES_34994
-00:1e:58:34:a5:59 Wayne
-00:13:46:cc:60:c2 default
-00:12:17:3f:1e:05 the2arnolds
-00:18:4d:96:b7:50 Blinky
-00:0f:cc:f2:05:6c Netopia
-00:13:10:0e:38:37 OLSON
-00:1d:7e:4e:51:e5 1450linksys
+00:23:97:33:45:EF 09FX04040190
+00:18:4d:9b:50:84 fluffy
+AC:B3:13:90:5E:30 DG1670A32
+14:CF:E2:93:13:70 rivers2.0
+90:1A:CA:6E:30:A0 Pearson Specter Litt
+F8:E4:FB:ED:8C:13 BTS
+00:0F:B5:D6:FA:C0 Nagato
+88:1F:A1:36:73:74 julie
+00:12:0E:15:ED:94 05B412932255
+20:C9:D0:1F:8E:CB AVA Wi-Fi 
